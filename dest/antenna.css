@@ -50,9 +50,16 @@ a {
   font-size: 1em;
   font-weight: 400;
 }
-#box2 {
+#box2-inner {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
+  margin: 72px 0 0;
+}
+@media screen and (max-width: 559px) {
+  #box2-inner {
+    flex-flow: column;
+  }
 }
 .pager {
   text-align: center;
@@ -61,8 +68,20 @@ a {
   font-size: 18px;
   font-weight: bold;
 }
+#footer-inner {
+  padding: 72px 0 32px 0;
+  display: flex;
+  justify-content: center;
+}
+#footer-inner .footer-address {
+  margin: 0 8px 0 0;
+}
+#footer-inner .footer-address img {
+  vertical-align: sub;
+}
 .hatena-module {
   margin: 0 0 40px;
+  flex: 0 1 48%;
 }
 .hatena-module .hatena-module-title {
   font-size: 18px;
@@ -71,7 +90,7 @@ a {
 }
 .entry {
   width: 660px;
-  margin: auto;
+  margin: 0 auto 72px;
 }
 @media screen and (max-width: 559px) {
   .entry {
@@ -85,11 +104,29 @@ a {
     margin: 0 auto;
   }
 }
+.entry .entry-header {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+.entry .entry-header .entry-date {
+  font-size: 14px;
+  order: 2;
+  margin: 0 0 4px;
+}
 .entry .entry-header .entry-date a {
   color: #666;
 }
 .entry .entry-header .entry-title {
   font-size: 24px;
+  order: 1;
+  margin: 0 0 8px;
+}
+.entry .entry-header .entry-categories {
+  order: 3;
+}
+.entry .entry-header .entry-categories .entry-category-link {
+  font-size: 14px;
 }
 .entry .entry-content {
   margin: 32px 0;

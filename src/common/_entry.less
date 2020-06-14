@@ -1,6 +1,6 @@
 .entry{
     width: 660px;
-    margin: auto;
+    margin: 0 auto 72px;
     @media @viewport-max-560{
         width: auto;
         margin: 0 auto;
@@ -10,11 +10,27 @@
        margin: 0 auto;
     }
     .entry-header{
-        .entry-date a{
-            color: @sub-text;
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        .entry-date{
+            font-size: 14px;
+            order: 2;
+            margin: 0 0 4px;
+            a{
+                color: @sub-text;
+            }
         }
         .entry-title{
             font-size: 24px;
+            order: 1;
+            margin: 0 0 8px;
+        }
+        .entry-categories{
+            order: 3;
+            .entry-category-link{
+                font-size: 14px;
+            }
         }
     }
     .entry-content{

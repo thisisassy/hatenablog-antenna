@@ -43,9 +43,15 @@ a{
 }
 
 
-#box2{
+#box2-inner{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    margin: 72px 0 0;
+
+    @media @viewport-max-560{
+        flex-flow: column;
+    }
 }
 .pager{
     text-align: center;
@@ -53,4 +59,16 @@ a{
     font-size: 18px;
     font-weight: bold;
 }
+}
+
+#footer-inner{
+    padding: 72px 0 32px 0;
+    display: flex;
+    justify-content: center;
+    .footer-address{
+        margin: 0 8px 0 0;
+        img{
+            vertical-align: sub;
+        }
+    }
 }
