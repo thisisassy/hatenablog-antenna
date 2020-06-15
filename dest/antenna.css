@@ -88,6 +88,34 @@ a {
   font-weight: bold;
   margin: 0 0 24px;
 }
+.hatena-module .hatena-module-body .hatena-urllist .urllist-item {
+  margin: 0 0 1em;
+}
+.hatena-module .hatena-module-body .hatena-urllist .urllist-item:last-child {
+  margin: 0;
+}
+.hatena-module .hatena-module-body .hatena-urllist .urllist-date-link a {
+  color: #666;
+}
+.hatena-module .hatena-module-body .hatena-urllist .urllist-entry-body {
+  color: #666;
+}
+.hatena-module .hatena-module-body .hatena-urllist .urllist-category-link {
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 0.25em;
+  margin: 0 4px 4px 0;
+  display: inline-block;
+  line-height: 1;
+}
+.hatena-module-category .hatena-urllist li {
+  line-height: 1.7;
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin: 0 0 4px;
+  padding: 0.25em;
+  display: inline-block;
+}
 .entry {
   width: 660px;
   margin: 0 auto 72px;
@@ -148,9 +176,13 @@ a {
   margin: 32px 0;
 }
 .entry-content .table-of-contents {
+  margin: 0;
   padding: 8px 1em;
   background: #f5f5f5;
-  width: 100%;
+}
+.entry-content .table-of-contents li,
+.entry-content .table-of-contents ul > li {
+  list-style: none;
 }
 .entry-content h1,
 .entry-content h2,
@@ -180,6 +212,7 @@ a {
   font-size: 20px;
 }
 .entry-content p {
+  text-align: justify;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -223,7 +256,7 @@ a {
 .entry-content table {
   width: 100%;
 }
-.entry-content table thead th {
+.entry-content table th {
   background: #666;
   padding: 0.25em;
   color: #fff;
@@ -238,6 +271,7 @@ a {
 .entry-footer .entry-footer-section {
   font-size: 14px;
   color: #666;
+  margin: 0 0 1em;
 }
 .entry-footer .entry-footer-modules .hatena-module-related-entries .hatena-module-title {
   font-size: 18px;
@@ -263,6 +297,25 @@ a {
 }
 .entry-footer .entry-footer-modules .hatena-module-related-entries .hatena-module-body .urllist-entry-body {
   display: none;
+}
+.entry-footer .entry-comment {
+  margin: 0 0 1em;
+}
+.entry-footer .entry-comment .comment-content {
+  padding: 0.25em 0;
+}
+.entry-footer .entry-comment .comment-metadata {
+  font-size: 14px;
+  color: #666;
+}
+.entry-footer .leave-comment-title {
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 0.3em 0.25em;
+}
+.entry-footer .leave-comment-title:hover,
+.entry-footer .leave-comment-title:focus {
+  color: #222;
 }
 .archive-entries {
   display: flex;

@@ -54,9 +54,12 @@
     margin: 32px 0;
 
     .table-of-contents{
+        margin: 0;
         padding: 8px 1em;
         background: @light-gray;
-        width: 100%;
+        li,ul > li{
+                list-style: none;
+        }
     }
     h1,h2,h3,h4,h5,h6,p{
         margin: 30px 0;
@@ -80,6 +83,7 @@
         font-size: 20px;
     }
     p{
+        text-align: justify;
         font-size: 17px;
         line-height: 1.7;
     }
@@ -115,13 +119,12 @@
     }
     table{
         width: 100%;
-        thead{
                 th{
                     background: @sub-text;
                     padding: 0.25em;
                     color: #fff;
                 }
-        }
+
         tbody{
             tr{
                 &:nth-child(2n){
@@ -141,6 +144,7 @@
     .entry-footer-section{
         font-size: 14px;
         color: @sub-text;
+        margin: 0 0 1em;
     }
     .entry-footer-modules{
         .hatena-module-related-entries{
@@ -172,6 +176,24 @@
                     display: none;
                 }
             }
+        }
+    }
+    .entry-comment{
+        margin: 0 0 1em;
+        .comment-content{
+            padding: 0.25em 0;
+        }
+        .comment-metadata{
+            font-size: 14px;
+            color: @sub-text;
+        }
+    }
+    .leave-comment-title{
+        border: 1px solid @sub-text;
+        border-radius: 4px;
+        padding: 0.3em 0.25em;
+        &:hover,&:focus{
+            color: @text;
         }
     }
 }

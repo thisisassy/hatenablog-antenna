@@ -6,4 +6,40 @@
         font-weight: bold;
         margin: 0 0 24px;
     }
+    .hatena-module-body{
+        .hatena-urllist{
+            .urllist-item{
+                margin: 0 0 1em;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+            .urllist-date-link a{
+                color: @sub-text;
+            }
+            .urllist-entry-body{
+                color: @sub-text;
+            }
+            .urllist-category-link{
+                background: @light-gray;
+                border-radius: 4px;
+                padding: 0.25em;
+                margin: 0 4px 4px 0;
+                display: inline-block;
+                line-height: 1;
+            }
+        }
+    }
+}
+.hatena-module-category{
+    .hatena-urllist{
+        li{
+            line-height: 1.7;
+            background: @light-gray;
+            border-radius: 4px;
+            margin: 0 0 4px;
+            padding: 0.25em;
+            display: inline-block;
+        }
+    }
 }
