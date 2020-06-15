@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: column;
         order: 1;
+        position: relative;
         .entry-date{
             font-size: 14px;
             order: 2;
@@ -22,7 +23,7 @@
             }
         }
         .entry-title{
-            font-size: 24px;
+            font-size: 30px;
             order: 1;
             margin: 0 0 8px;
         }
@@ -33,7 +34,144 @@
             }
         }
     }
-    .entry-content{
-        margin: 32px 0;
+    .entry-header-menu{
+        position: absolute;
+        top: 0;
+        right: -8%;
+        border: 1px solid @text;
+        border-radius: 4px;
+        padding: 0.25em;
+        a{
+            color: @sub-text;
+            &:hover,&:focus{
+                color: @text;
+            }
+        }
+    }
+}
+
+.entry-content{
+    margin: 32px 0;
+
+    .table-of-contents{
+        padding: 8px 1em;
+        background: @light-gray;
+        width: 100%;
+    }
+    h1,h2,h3,h4,h5,h6,p{
+        margin: 30px 0;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    h6{
+        font-size: 20px;
+    }
+    p{
+        font-size: 17px;
+        line-height: 1.7;
+    }
+    hr{
+        color: @light-gray;
+        border: 0;
+        border: 1px solid @light-gray;
+        margin: 1em 0;
+    }
+    ul,ol,dl{
+        margin-inline-start: 1em;
+        li{
+            line-height: 1.7;
+            list-style-type: disc;
+            ul{
+                margin-inline-start: 1em;
+            }
+        }
+    }
+    pre{
+        background: #323232;
+        padding: 0.2em;
+    }
+    a{
+        color: @accent;
+        &:hover,&:focus{
+            text-decoration: underline;
+        }
+    }
+    blockquote{
+        padding: 8px 1em;
+        border-left: 2px solid @light-gray;
+    }
+    table{
+        width: 100%;
+        thead{
+                th{
+                    background: @sub-text;
+                    padding: 0.25em;
+                    color: #fff;
+                }
+        }
+        tbody{
+            tr{
+                &:nth-child(2n){
+                    td{
+                        background: #fff;
+                    }
+                }
+            }
+            td{
+                background: @gray;
+                padding: 0.25em;
+            }
+        }
+    }
+}
+.entry-footer{
+    .entry-footer-section{
+        font-size: 14px;
+        color: @sub-text;
+    }
+    .entry-footer-modules{
+        .hatena-module-related-entries{
+            .hatena-module-title{
+                font-size: 18px;
+            }
+            .hatena-module-body{
+                .related-entries-item-inner{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 33%;
+                    .related-entries-image-link{
+                        width: 220px;
+
+                        img{
+                            width: 100%;
+                            height: 100px;
+                            background-position: 50%;
+                        }
+                    }
+                }
+                .urllist-title-link{
+                    font-size: 1em;
+                }
+                .urllist-date-link a{
+                    color: @sub-text;
+                }
+                .urllist-entry-body{
+                    display: none;
+                }
+            }
+        }
     }
 }
