@@ -64,9 +64,9 @@ a {
 .pager {
   text-align: center;
 }
-.pager .pager-next {
+.pager .pager-next,
+.pager .pager-prev {
   font-size: 18px;
-  font-weight: bold;
 }
 #footer-inner {
   padding: 72px 0 32px 0;
@@ -207,6 +207,9 @@ a {
 }
 .entry .entry-header .entry-categories .entry-category-link {
   font-size: 14px;
+  background: #f5f5f5;
+  padding: 0.25em;
+  display: inline-block;
 }
 .entry .entry-header-menu {
   position: absolute;
@@ -290,7 +293,16 @@ a {
   margin-inline-start: 1em;
 }
 .entry-content pre {
-  background: #323232;
+  background: #24292e;
+  color: #fff;
+  padding: 0.8em;
+  border-radius: 4px;
+  margin: 1em 0;
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+}
+.entry-content code {
+  background: #24292e;
+  color: #fff;
   padding: 0.2em;
 }
 .entry-content a {
@@ -390,6 +402,29 @@ a {
   border: 1px solid #ECECEC;
   background: #ECECEC;
   transition: all 0.3s;
+}
+.page-about .entry-content h2 {
+  margin: 0 0 8px;
+}
+.page-about .entry-content dl {
+  margin: 0;
+}
+.page-about .entry-content dl dt,
+.page-about .entry-content dl dd {
+  line-height: 1.5;
+}
+.page-about .entry-content dl dt {
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+.page-about .entry-content dl dd {
+  margin: 0 0 1em;
+}
+.page-about .entry-content dl dd ul {
+  margin: 0;
+}
+.page-about .entry-content dl dd ul li {
+  list-style: none;
 }
 .archive-entries {
   display: flex;
