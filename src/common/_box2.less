@@ -8,6 +8,13 @@
     }
     .hatena-module-body{
         .hatena-urllist{
+            li{
+                margin: 0 0 12px;
+
+                &:last-child{
+                    margin: 0;
+                }
+            }
             .urllist-item{
                 margin: 0 0 1em;
                 &:last-child{
@@ -23,11 +30,29 @@
             .urllist-category-link{
                 background: @light-gray;
                 border-radius: 4px;
-                padding: 0.25em;
+                padding: 0.4em;
                 margin: 0 4px 4px 0;
                 display: inline-block;
                 line-height: 1;
             }
+        }
+    }
+}
+.hatena-module-profile{
+    .hatena-module-body{
+        .profile-icon-link{
+            float: left;
+            width: 60px;
+            margin: 0 20px 0 0;
+            img{
+                border-radius: 50%;
+            }
+        }
+        .profile-description,.btn-subscribe{
+            margin: 0 0 12px 80px;
+        }
+        .profile-description p{
+            font-size: 14px;
         }
     }
 }
@@ -40,6 +65,37 @@
             margin: 0 0 4px;
             padding: 0.25em;
             display: inline-block;
+        }
+    }
+}
+.hatena-module-search-box{
+    .search-form{
+        width: 100%;
+        display: flex;
+        position: relative;
+        .search-module-input{
+            width: 100%;
+            border: 0;
+            background: #f6f7f8;
+            padding: 0.8em;
+        }
+        .search-module-button{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            right: 14px;
+            bottom: 0;
+            border: 0;
+            margin: auto;
+            background: url(https://blog.hatena.ne.jp/images/theme/search@2x.png) no-repeat right center;
+            background-size: 20px 20px;
+            text-indent: -999px;
+            cursor: pointer;
+            opacity: 0.4;
+            &:hover,&:focus{
+                opacity: 1;
+            }
         }
     }
 }
