@@ -1,11 +1,11 @@
 .entry{
     width: 660px;
     margin: 0 auto 72px;
-    @media @viewport-max-560{
+    @media @viewport-md{
         width: auto;
         margin: 0 auto;
     }
-    @media @viewport-max-960{
+    @media @viewport-lg{
        width: auto;
        margin: 0 auto;
     }
@@ -115,28 +115,44 @@
     }
     blockquote{
         padding: 8px 1em;
-        border-left: 2px solid @light-gray;
+        border-left: 4px solid @gray;
+        border-radius: 4px;
     }
     table{
         width: 100%;
+        border: 1px solid @gray;
                 th{
-                    background: @sub-text;
-                    padding: 0.25em;
-                    color: #fff;
+                    background: #fff;
+                    padding: 0.25em 0.4em;
+                    color: @text;
                 }
 
         tbody{
             tr{
                 &:nth-child(2n){
                     td{
-                        background: #fff;
+                        background: @light-gray;
                     }
                 }
             }
             td{
-                background: @gray;
-                padding: 0.25em;
+                padding: 0.25em 0.4em;
             }
+        }
+    }
+    .entry-see-more{
+        border: 1px solid @text;
+        border-radius: 4px;
+        color: @sub-text;
+        text-decoration: none;
+        padding: 0.6em;
+
+        &:hover,&:focus{
+            border: 1px solid @gray;
+            background: @gray;
+            color: @text;
+            transition: all .3s;
+            text-decoration: none;
         }
     }
 }
@@ -180,6 +196,9 @@
     }
     .entry-comment{
         margin: 0 0 1em;
+        &:last-child{
+            margin: 0;
+        }
         .comment-content{
             padding: 0.25em 0;
         }
@@ -189,11 +208,15 @@
         }
     }
     .leave-comment-title{
-        border: 1px solid @sub-text;
+        border: 1px solid @text;
         border-radius: 4px;
-        padding: 0.3em 0.25em;
+        color: @sub-text;
+        padding: 0.6em;
         &:hover,&:focus{
             color: @text;
+            border: 1px solid @gray;
+            background: @gray;
+            transition: all .3s;
         }
     }
 }
